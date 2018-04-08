@@ -6,12 +6,26 @@ html {
 }
 
 /* Place your styles below */
+body {
+    background-image: url(https://www.allkpop.com/upload/2017/09/af_org/06110438/bts.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
 header {
 	text-align: center;
+	font-family: 'Oswald', sans-serif;
+    text-shadow: 3px 3px #e7ac9b;
+    font-size: 20px
 }
 
 main {
 	text-align: center;
+	font-family: 'Oswald', sans-serif;
+    text-shadow: 2px 2px #e7ac9b;
+    font-size: 20px;
 }
 
 
@@ -34,7 +48,7 @@ main {
 	height: 50px;
 }
 
-div #container {
+div #quiz-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -51,12 +65,18 @@ div #question {
 
 h2 {
 	flex-basis: 100%;
-	font-size: 2em;
+	text-align: center;
+	font-family: 'Oswald', sans-serif;
+    /*text-shadow: 2px 2px #bed0e9;*/
+    font-size: 30px;
 }
 
 input {
 	flex-basis: 50%;
-
+    text-align: center;
+	font-family: 'Oswald', sans-serif;
+    text-shadow: 2px 2px #bed0e9;
+    font-size: 25px;
 }
 
 div #result {
