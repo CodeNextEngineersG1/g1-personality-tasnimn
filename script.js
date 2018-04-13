@@ -8,7 +8,7 @@ var bias = null;
 var pageTitle = document.getElementById("page-title");
 var pageTitleText = pageTitle.innerHTML;
 var tryAgain = document.getElementById("try-again");
-var quizWrapper = document.getElementById("quizWrapper");
+var quizWrapper = document.getElementById("quiz-wrapper");
 var result = document.getElementById("result");
 var formSubmit = document.getElementById("form-submit");
 
@@ -20,21 +20,7 @@ function resetQuiz() {
     quizWrapper.style.display = "flex";
     result.style.display = "none";
     tryAgain.style.display = "none";
-    submitButton.style.display = "block";
-
-    friend.checked = false;
-    number.checked = false;
-    hobbies.checked = false;
-    zodiac.checked = false;
-    color.checked = false;
-    bias.checked = false; 
-
-    friend = null;
-    number = null;
-    hobbies = null;
-    zodiac = null;
-    color = null; 
-    bias = null;
+    //submitButton.style.display = "block";
 }
 
 function processResults() {
@@ -64,32 +50,32 @@ function processResults() {
         alert("Complete all questions before continuing");
     } else {
         var personality = getPersonality(); 
-        // quizWrapper.style.display = "none";
+        quizWrapper.style.display = "none";
         formSubmit.style.display = "none";
         result.style.display = "block";
         tryAgain.style.display = "block";
 
         if (personality == "RM") {
-            pageTitle.innerHTML("You are RM"); 
+            pageTitle.innerHTML = "You are RM"; 
             //result.style.backgroundImage = "url('img/character.png')";
         }
         if (personality == "Jin") {
-            pageTitle.innerHTML("You are Jin");
+            pageTitle.innerHTML = "You are Jin";
         }
         if (personality == "Suga") {
-            pageTitle.innerHTML("You are Suga");
+            pageTitle.innerHTML = "You are Suga";
         }
         if (personality == "J-hope") {
-            pageTitle.innerHTML("You are Jin");
+            pageTitle.innerHTML = "You are Jin";
         }
         if (personality == "Jimin") {
-            pageTitle.innerHTML("You are Jimin");
+            pageTitle.innerHTML = "You are Jimin";
         }
         if (personality == "V") {
-            pageTitle.innerHTML("You are V");
+            pageTitle.innerHTML = "You are V";
         }
         if (personality == "Jungkook") {
-            pageTitle.innerHTML("You are Jungkook");
+            pageTitle.innerHTML = "You are Jungkook";
         
 
     }
