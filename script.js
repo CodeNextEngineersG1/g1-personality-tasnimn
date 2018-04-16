@@ -20,7 +20,7 @@ function resetQuiz() {
     quizWrapper.style.display = "flex";
     result.style.display = "none";
     tryAgain.style.display = "none";
-    //submitButton.style.display = "block";
+    formSubmit.style.display = "block";
 }
 
 function processResults() {
@@ -57,28 +57,30 @@ function processResults() {
 
         if (personality == "RM") {
             pageTitle.innerHTML = "You are RM"; 
-            //result.style.backgroundImage = "url('img/character.png')";
-        }
+            result.style.backgroundImage = "url('img/character.png')";
         if (personality == "Jin") {
             pageTitle.innerHTML = "You are Jin";
+            result.style.backgroundImage = "url('img/jin.jpg')";
         }
         if (personality == "Suga") {
             pageTitle.innerHTML = "You are Suga";
-        }
+            result.style.backgroundImage = "url('img/suga.jpg')";
         if (personality == "J-hope") {
-            pageTitle.innerHTML = "You are Jin";
+            pageTitle.innerHTML = "You are J-hope";
+            result.style.backgroundImage = "url('img/jhope.jpg')";
         }
         if (personality == "Jimin") {
             pageTitle.innerHTML = "You are Jimin";
+            result.style.backgroundImage = "url('img/jimin.jpg')";
         }
         if (personality == "V") {
             pageTitle.innerHTML = "You are V";
-        }
+            result.style.backgroundImage = "url('img/v.jpg')";
         if (personality == "Jungkook") {
             pageTitle.innerHTML = "You are Jungkook";
-        
-
+            result.style.backgroundImage = "url('img/jk.jpg')";
     }
+  }
 }
 
 
@@ -183,7 +185,7 @@ function getPersonality() {
       score += 6;
     }
     
-    if(score == 0) {
+    if(score >= 0 && score <=2) {
         return "RM";
     }
     if(score >= 3 && score <=6) {
@@ -205,9 +207,12 @@ function getPersonality() {
         return "Jungkook";
     }
   }
-     
-
-
-
 
 }
+}
+}
+
+
+
+
+
